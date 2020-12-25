@@ -206,30 +206,6 @@ function generateLayout() {
         }
     }
 
-    function createFooter() {
-        const footer = document.createElement('footer');
-        const authorBlock = document.createElement('div');
-        const githubLink = document.createElement('a');
-        const year = document.createElement('span');
-        const rsBlock = document.createElement('div');
-        const rsLink = document.createElement('a');
-        const rsLogo = document.createElement('img');
-
-        authorBlock.classList.add('author-block');
-        githubLink.innerText = 'avbutlov';
-        githubLink.setAttribute('href', 'https://github.com/avbutlov');
-        year.innerText = '2020';
-        rsBlock.classList.add('rs-block');
-        rsLink.setAttribute('href', 'https://rs.school/js/');
-        rsLogo.setAttribute('src', 'https://rs.school/images/rs_school_js.svg');
-        authorBlock.append(githubLink);
-        authorBlock.append(year);
-        rsBlock.append(rsLink);
-        rsLink.append(rsLogo);
-        footer.append(authorBlock);
-        footer.append(rsBlock);
-        wrapper.append(footer);
-    }
 
     function showWordsCards() {
         const cardsContainers = document.querySelectorAll('.card');
@@ -249,7 +225,6 @@ function generateLayout() {
     createRatingPanel();
     createCards();
     createStartBtn();
-    createFooter();
     showWordsCards();
 }
 
